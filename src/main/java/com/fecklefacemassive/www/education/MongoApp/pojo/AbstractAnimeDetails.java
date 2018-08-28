@@ -11,7 +11,18 @@ public abstract class AbstractAnimeDetails {
 
     public List<AnimeReview> reviews;
 
-    AbstractAnimeDetails(String title) {
+    public AbstractAnimeDetails() {
+        super();
+    }
+
+    public AbstractAnimeDetails(String title) {
         this.title = title;
+    }
+
+    public AbstractAnimeDetails(String title, String company, String description, List<AnimeReview> reviews) {
+        this(title);
+        this.company = company;
+        this.description = description;
+        this.reviews = reviews;
     }
 }

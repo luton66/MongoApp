@@ -8,6 +8,10 @@ public class AnimeReview {
 
     public String score;
 
+    public AnimeReview() {
+        super();
+    }
+
     public AnimeReview (String reviewer, String review, String score) {
         this.reviewer = reviewer;
         this.review = review;

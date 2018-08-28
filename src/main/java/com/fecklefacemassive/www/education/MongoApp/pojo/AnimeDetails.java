@@ -8,8 +8,4 @@ public class AnimeDetails extends AbstractAnimeDetails {
 
     @Id
     public String id;
-
-    public AnimeDetails(String title) {
-        super(title);
-    }
 }
