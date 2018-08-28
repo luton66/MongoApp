@@ -1,7 +1,6 @@
 package com.fecklefacemassive.www.education.MongoApp;
 
-import com.mongodb.client.MongoDatabase;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.fecklefacemassive.www.education.MongoApp.Dao.AnimeBaseRepository;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.data.mongodb.MongoDbFactory;
@@ -11,26 +10,13 @@ public class MongoAppApplication {
 
 	private static MongoDbFactory mongo;
 
-	@Autowired
-	public MongoAppApplication(MongoDbFactory mongo) {
+	private AnimeBaseRepository repository;
+
+	public MongoAppApplication(MongoDbFactory mongo, AnimeBaseRepository repository) {
 		this.mongo = mongo;
+		this.repository = repository;
 	}
 
-	public static void main(String[] args) {
-
-	    SpringApplication.run(MongoAppApplication.class, args);
-	    runTest();
-	}
-
-
-    public static void runTest() {
-		MongoDatabase db = mongo.getDb();
-
-		String x = db.getName();
-
-		db.createCollection("NewCollection");
-
-
-    }
+	public static void main(String[] args) { SpringApplication.run(MongoAppApplication.class, args); }
 
 }
