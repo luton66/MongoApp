@@ -2,9 +2,7 @@ package com.fecklefacemassive.www.education.MongoApp.RestControllers;
 
 import com.fecklefacemassive.www.education.MongoApp.Dao.AnimeBaseRepository;
 import com.fecklefacemassive.www.education.MongoApp.pojo.AnimeDetails;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -25,5 +23,21 @@ public class AnimeDetailsRest {
 
         return allAnime;
     }
+
+    @PutMapping
+    public void addAnime(@RequestBody AnimeDetails animeDetails) {
+        animeBaseRepository.insert(animeDetails);
+    }
+
+    @PostMapping
+    public void updateAnime (@RequestBody AnimeDetails animeDetails) {
+        animeBaseRepository.save(animeDetails);
+    }
+
+    @DeleteMapping("/{id}")
+    public void deleteAnime (@PathVariable("id") String id) {
+        animeBaseRepository.deleteById(id);
+    }
+
 
 }
