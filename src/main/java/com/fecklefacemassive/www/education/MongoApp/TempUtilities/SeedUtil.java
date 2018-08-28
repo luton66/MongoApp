@@ -61,8 +61,8 @@ public class SeedUtil implements CommandLineRunner{
          */
 
         //The following lines can be incommented to carry out the above test.
-        //this.ballsRepo.deleteAll();
-        //this.populateBalleRepo();
+        this.ballsRepo.deleteAll();
+        this.populateBalleRepo();
     }
 
     /**
