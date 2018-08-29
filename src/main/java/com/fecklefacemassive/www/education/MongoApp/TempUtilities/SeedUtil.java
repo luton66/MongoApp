@@ -62,7 +62,7 @@ public class SeedUtil implements CommandLineRunner{
 
         //The following lines can be incommented to carry out the above test.
         this.ballsRepo.deleteAll();
-        this.populateBalleRepo();
+        this.populateBallsRepo();
     }
 
     /**
@@ -70,7 +70,7 @@ public class SeedUtil implements CommandLineRunner{
      *
      * This is only done for test purposes.
      */
-    private void populateBalleRepo() {
+    private void populateBallsRepo() {
         Balls ball1 = new Balls();
         Balls ball2 = new Balls();
 

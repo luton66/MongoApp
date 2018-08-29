@@ -8,7 +8,6 @@ public class Balls {
     @Id
     String id;
 
-
     public String ballName;
     public String ballType;
 }
