@@ -1,6 +1,6 @@
-At this point I am considering this to be version 0.1 of my Mongo Program
+- The following branch is one that I have created just to show a few additional approaches that could be run, but I will not be merging in to master
 
-There are successful gets and puts from the AnimeDetails and Balls Repositories
+https://www.baeldung.com/queries-in-spring-data-mongodb
 
 In regards to some of the filtering stuff being added here, the query methods that are supported by 
 Spring are in the following. 
