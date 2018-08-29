@@ -54,4 +54,25 @@ public class AnimeDetailsRest {
         return animeDetails;
     }
 
+    /**
+     * This is a more complicated filter, as score is in a nested object 'reviews' within AnimeDetails. To do this
+     * a @Query annotation is defined in AnimeBaseRepository with the required mongo query.
+     *
+     * @param score the score to search by
+     * @return a list fo AnimeDetails that match the score.
+     */
+    @GetMapping("/score/{score}")
+    public List<AnimeDetails> findByScore(@PathVariable("score") int score) {
+        List<AnimeDetails> animeDetails = this.animeBaseRepository.findByScore(score);
+
+        return animeDetails;
+    }
+
+    @GetMapping("/minscore/{score}")
+    public List<AnimeDetails> findByMinScore(@PathVariable("score") int score) {
+        List<AnimeDetails> animeDetails = this.animeBaseRepository.findMinScore(score);
+
+        return animeDetails;
+    }
+
 }

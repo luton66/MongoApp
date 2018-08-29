@@ -36,21 +36,29 @@ public class SeedUtil implements CommandLineRunner{
         konosuba.company = "unknown";
         konosuba.description = "Fun Stuff";
         konosuba.reviews = Arrays.asList(
-                new AnimeReview("Leigh", "This is great!", "9"),
-                new AnimeReview("Jamo", "Also think this is the shiz!", "9")
+                new AnimeReview("Leigh", "This is great!", 9),
+                new AnimeReview("Jamo", "Also think this is the shiz!", 9)
         );
 
         AnimeDetails wagnaria = new AnimeDetails("Wagnaria");
         wagnaria.company = "unknown";
         wagnaria.description = "Fun Cafe Stuff";
         wagnaria.reviews = Arrays.asList(
-                new AnimeReview("Leigh", "Aww! So Nice", "10"),
-                new AnimeReview("Jamo", "Dawg! Bra Bra Bra!", "9")
+                new AnimeReview("Leigh", "Aww! So Nice", 10),
+                new AnimeReview("Jamo", "Dawg! Bra Bra Bra!", 9)
+        );
+
+        AnimeDetails mechAssault = new AnimeDetails("MechAssault");
+        wagnaria.company = "unknown";
+        wagnaria.description = "Crap Mech Stuff";
+        wagnaria.reviews = Arrays.asList(
+                new AnimeReview("Leigh", "Boring!", 5),
+                new AnimeReview("Jamo", "Shit! Bra Bra Bra!", 3)
         );
 
         this.repository.deleteAll();
 
-        List<AnimeDetails> myList = Arrays.asList(konosuba, wagnaria);
+        List<AnimeDetails> myList = Arrays.asList(konosuba, wagnaria, mechAssault);
         this.repository.saveAll(myList);
 
         /*
