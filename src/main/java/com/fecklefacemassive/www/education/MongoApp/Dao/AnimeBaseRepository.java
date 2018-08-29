@@ -7,4 +7,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface AnimeBaseRepository extends MongoRepository<AnimeDetails, String> {
 
+    AnimeDetails findByTitle(String title);
 }

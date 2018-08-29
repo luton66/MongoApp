@@ -39,5 +39,19 @@ public class AnimeDetailsRest {
         animeBaseRepository.deleteById(id);
     }
 
+    /**
+     * Don't really know how this works, but simply by having a method 'findByTitle' it knows how to
+     * filter for that field. Apart from a line in the AnimeBaseRepository interface, there is no other
+     * programming added.
+     *
+     * @param title the title to search for
+     * @return a matching title.
+     */
+    @GetMapping("/title/{title}")
+    public AnimeDetails findByTitle(@PathVariable("title") String title) {
+        AnimeDetails animeDetails = this.animeBaseRepository.findByTitle(title);
+
+        return animeDetails;
+    }
 
 }
