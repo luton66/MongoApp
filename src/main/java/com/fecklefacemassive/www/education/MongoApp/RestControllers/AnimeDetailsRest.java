@@ -75,4 +75,23 @@ public class AnimeDetailsRest {
         return animeDetails;
     }
 
+    /**
+     * This is just a bullshit Mapping to use, as I was simply carrying out a test. This method calls on
+     * animeBaseRepository.testSpecific. However, where this class has been able to determine which Collection to write
+     * to using the @Document annotation on AnimeDetails - found in extends MongoRepository<AnimeDetails, .... - the
+     * method below is actually going to CustomAnimeDetailsRepoImpl, which uses the older MongoTemplate method of
+     * building a query.
+     *
+     * Make sure to check AnimeBaseRepository for more comments.
+     *
+     * @return doesn't matter.
+     */
+    @GetMapping("/wildtest")
+    public List<AnimeDetails> testRun() {
+        List<AnimeDetails> animeDetails = this.animeBaseRepository.testSpecific();
+
+        return animeDetails;
+    }
+
+
 }

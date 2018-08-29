@@ -1,8 +1,6 @@
-- The following branch is one that I have created just to show a few additional approaches that could be run, but I will not be merging in to master
+This push is essentially intending to test the possibility of using BOTH MongoRepository AND MongoTemplate for queries within the same RestController
 
-https://www.baeldung.com/queries-in-spring-data-mongodb
+The test that uses the MongoTemplate also uses the Query, and criteria builder to feed the query in to the MongoTemplate.
 
-In regards to some of the filtering stuff being added here, the query methods that are supported by 
-Spring are in the following. 
-
-docs.spring.io/spring-data/mongodb/docs/1.2.0.RELEASE/reference/html/mongo.repositories.html
+To be honest, there may never be a need to do this, as effective use of the @Query annotations should cover everything, but in case the Query builder, and
+MongoTemplate is ever required, this is how you can use both in this scenario. 
