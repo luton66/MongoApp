@@ -49,9 +49,9 @@ public class SeedUtil implements CommandLineRunner{
         );
 
         AnimeDetails mechAssault = new AnimeDetails("MechAssault");
-        wagnaria.company = "unknown";
-        wagnaria.description = "Crap Mech Stuff";
-        wagnaria.reviews = Arrays.asList(
+        mechAssault.company = "unknown";
+        mechAssault.description = "Crap Mech Stuff";
+        mechAssault.reviews = Arrays.asList(
                 new AnimeReview("Leigh", "Boring!", 5),
                 new AnimeReview("Jamo", "Shit! Bra Bra Bra!", 3)
         );
