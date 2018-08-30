@@ -6,13 +6,13 @@ public class AnimeReview {
 
     public String review;
 
-    public String score;
+    public int score;
 
     public AnimeReview() {
         super();
     }
 
-    public AnimeReview (String reviewer, String review, String score) {
+    public AnimeReview (String reviewer, String review, int score) {
         this.reviewer = reviewer;
         this.review = review;
         this.score = score;
