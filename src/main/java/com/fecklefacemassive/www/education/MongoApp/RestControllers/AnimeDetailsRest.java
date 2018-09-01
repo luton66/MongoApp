@@ -75,4 +75,15 @@ public class AnimeDetailsRest {
         return animeDetails;
     }
 
+    /**
+     * This is a MongoTempate test method, see seperate branch for full docs
+     *
+     * @return List<AnimeDetails>
+     */
+    @GetMapping("/mongotemplate/test")
+    public List<AnimeDetails> mongoTestRun() {
+        List<AnimeDetails> results = this.animeBaseRepository.mongoTemplateSpecificTest();
+
+        return results;
+    }
 }
